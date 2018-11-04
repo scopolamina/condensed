@@ -17,13 +17,6 @@ sections:
   templates:
   - landing-page
   - default
-- type: directory
-  path: _people
-  label: People
-  create: all
-  match: "*"
-  templates:
-  - person
 - type: document
   path: _data/information.yml
   label: Contact Information
