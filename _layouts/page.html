@@ -1,16 +1,20 @@
 ---
 layout: default
 ---
-{% comment %}
-    A general page layout. Used by default for all content on the site.
-{% endcomment %}
+<article class="post">
 
-{% include breadcrumbs.html class="content-narrow" %}
+  <header class="post-header">
+  <!--  <h1 class="post-title">{{ page.title }}</h1>-->
+  </header>
 
-<div class="container pure-g">
-    <div class="pure-u-1">
-        <div class="content content-narrow">
-            {{ content }}
-        </div>
-    </div>
-</div>
+  {%if page.tagline%}
+  <div class="tagline">
+  <span class="page-title">{{page.title}}</span> <span class="page-tagline"><em>{{page.tagline}}</em></span>
+  </div>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>

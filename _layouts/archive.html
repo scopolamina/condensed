@@ -1,18 +1,29 @@
 ---
-layout: default
+layout: page
 ---
-{% comment %}
-  This layout is used by the jekyll-archives plugin to generate
-  archive pages for all posts
-{% endcomment %}
 
-<h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
 
-<ul class="posts-list">
-{% for post in page.posts %}
-  <li>
-    <a class="post-link" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
-		<div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
-  </li>
+{% for post in site.posts %}
+{% for cat in post.categories %}
+{% if cat == page.category %}
+
+
+
+<div class="post postContent">
+  <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+  </div>
+  <div class="postTag">
+    {{post.tag}}
+  </div>
+  <br>
+  <div class="postTitle">
+  <a class='postLink' href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+  </div>
+  <div class="postExt">
+    {{post.excerpt}}
+  </div>
+</div>
+{% endif %}
 {% endfor %}
-</ul>
+
+{% endfor %}
