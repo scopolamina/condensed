@@ -1,0 +1,14 @@
+---
+title: Condensed
+email: hemangsk@gmail.com
+description: 
+baseurl: ''
+url: http://yourdomain.com
+twitter_username: 
+paginate: 5
+theme-dark: false
+plugins:
+- jekyll-paginate
+- kramdown
+markdown: kramdown
+timezone: Etc/UTC

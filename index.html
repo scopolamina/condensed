@@ -1,60 +1,211 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<div class="home">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Condensed</title>
+  <meta name="description" content="">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="alternate" type="application/rss+xml" title="Condensed" href="http://yourdomain.com/feed.xml">
+</head>
 
 
-  {% for post in paginator.posts%}
+  <body class=" light  ">
+
+    
+<div class="wrapper">
+  <center> <a href="/index.html"><div class="site-title">   Condensed </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>   </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="http://yourdomain.com">HOME</a>
+
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/about/">About</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="home">
+
+
+  
   <div class="post postContent">
-    <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+    <div  class="postDate"><time datetime="2016-03-30T14:15:31+00:00" itemprop="datePublished">Mar 30, 2016</time>
     </div>
     <div class="postTag">
-      {{post.tag}}
+      
     </div>
     <br>
     <div class="postTitle">
-    <a class='postLink' href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+    <a class='postLink' href="http://yourdomain.com/jekyll/update/2016/03/30/welcome-to-jekyll.html">Welcome to Gravity!</a>
     </div>
     <div class="postExt">
-   {{ post.content | strip_html | truncate:200}}
+   Gravity is an unopinionated theme for Jekyll, the awesome static site generator.
+
+Some General Instructions for Jekyll
+
+You’ll find this post in your _posts directory. Go ahead and edit it and re-b...
     </div>
   </div>
 
-  {% endfor %}
-  {% if paginator.total_pages > 1 %}
-    <nav class="pagination">
-      {% if paginator.previous_page %}
-        <a class="paginationLink" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% endif %}
+  
+  <div class="post postContent">
+    <div  class="postDate"><time datetime="2016-03-30T14:15:31+00:00" itemprop="datePublished">Mar 30, 2016</time>
+    </div>
+    <div class="postTag">
+      
+    </div>
+    <br>
+    <div class="postTitle">
+    <a class='postLink' href="http://yourdomain.com/science/2016/03/30/science0.html">Long Longer and more Longer titles look cool too!!</a>
+    </div>
+    <div class="postExt">
+   “Could I be anymore pulling ?”
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <em class="paginationLink paginationLinkCurrent">{{ page }}</em>
-      {% elsif page == 1 %}
-        <a class="paginationLink" href="/">{{ page }}</a>
-      {% else %}
-        <a class="paginationLink" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo c...
+    </div>
+  </div>
 
-    {% if paginator.next_page %}
-      <a class="paginationLink" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% endif %}
-    </nav>
-  {% endif %}
+  
+  <div class="post postContent">
+    <div  class="postDate"><time datetime="2016-03-30T14:15:31+00:00" itemprop="datePublished">Mar 30, 2016</time>
+    </div>
+    <div class="postTag">
+      
+    </div>
+    <br>
+    <div class="postTitle">
+    <a class='postLink' href="http://yourdomain.com/science/2016/03/30/science.html">Science of Gravity</a>
+    </div>
+    <div class="postExt">
+   “Could I be anymore pulling ?”
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo c...
+    </div>
+  </div>
+
+  
+  <div class="post postContent">
+    <div  class="postDate"><time datetime="2016-03-30T14:15:31+00:00" itemprop="datePublished">Mar 30, 2016</time>
+    </div>
+    <div class="postTag">
+      
+    </div>
+    <br>
+    <div class="postTitle">
+    <a class='postLink' href="http://yourdomain.com/design/science/life/2016/03/30/design-stories.html">Design Stories : Gravity</a>
+    </div>
+    <div class="postExt">
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi...
+    </div>
+  </div>
+
+  
+  
   <!--<ul class="post-list">
-    {% for post in site.posts %}
+    
       <li>
-        <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta-main">Mar 30, 2016</span>
 
         <h2>
-          <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link-main" href="/jekyll/update/2016/03/30/welcome-to-jekyll.html">Welcome to Gravity!</a>
         </h2>
       </li>
-    {% endfor %}
+    
+      <li>
+        <span class="post-meta-main">Mar 30, 2016</span>
+
+        <h2>
+          <a class="post-link-main" href="/science/2016/03/30/science0.html">Long Longer and more Longer titles look cool too!!</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta-main">Mar 30, 2016</span>
+
+        <h2>
+          <a class="post-link-main" href="/science/2016/03/30/science.html">Science of Gravity</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta-main">Mar 30, 2016</span>
+
+        <h2>
+          <a class="post-link-main" href="/design/science/life/2016/03/30/design-stories.html">Design Stories : Gravity</a>
+        </h2>
+      </li>
+    
   </ul>-->
 
 
 
 </div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">Condensed</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By <a href="http://github.com/hemangsk/Gravity">Gravity</a></li>
+          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span>{ { Jekyll } }</a></span></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
